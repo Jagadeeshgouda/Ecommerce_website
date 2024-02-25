@@ -1,0 +1,57 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <title>
+        register
+    </title>
+
+    <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    {% load static %}
+    {% comment %} <link rel="stylesheet"  type="text/css" media='screen' href="{% static "styles/main.css" %}"> {% endcomment %}
+    
+    {% block content %}
+    <article class="card-body mx-auto" style="max-width: 400px;">
+    <div id="user">
+    <form action="" method = "POST">
+        <h1> Registration-Page</h1>
+        {% csrf_token %}
+        
+        {% for field in form %}
+        {% comment %} <div class="wrapper fadeInDown"> {% endcomment %}
+        <div id="formContent">
+        <div class="form-group">
+            {% comment %} <div class="form-group input-group">
+                <div class="input-group-prepend"> {% endcomment %}
+            <div class="card bg-light">
+                
+            <p>{{ field.label }}: {{ field }}</p>
+       
+    
+        {% endfor %}
+    <button  class="btn btn-primary" type='submit'>Submit</button>
+    <a href="/login" >login page</a>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+</div>
+</body>
+</article>
+<div>
+<footer style="background-color: #333;padding-left:650px;padding-bottom:20px;">
+    <p style="color: #fff;">&copy; 2023 My-Taxi. All rights reserved.</p>
+    <a href="https://drive.google.com/file/d/1Klfs4L2zrb_Wue2CcT2IDxlU9IO3bGWf/view?usp=drivesdk">jagadeeshgouda</a>
+  </footer>
+    {% endblock content %}
+</div>
+ 
+   
